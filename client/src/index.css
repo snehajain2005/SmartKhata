@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'DM Sans', sans-serif;
+    @apply bg-slate-50 text-slate-800;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Baloo 2', cursive;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-ink-600 hover:bg-ink-700 text-white font-semibold px-5 py-2.5 rounded-xl transition-all duration-200 shadow-sm active:scale-95;
+  }
+
+  .btn-secondary {
+    @apply bg-white hover:bg-slate-50 text-slate-700 font-semibold px-5 py-2.5 rounded-xl border border-slate-200 transition-all duration-200 shadow-sm active:scale-95;
+  }
+
+  .btn-danger {
+    @apply bg-rose-500 hover:bg-rose-600 text-white font-semibold px-5 py-2.5 rounded-xl transition-all duration-200 shadow-sm active:scale-95;
+  }
+
+  .btn-success {
+    @apply bg-emerald-500 hover:bg-emerald-600 text-white font-semibold px-5 py-2.5 rounded-xl transition-all duration-200 shadow-sm active:scale-95;
+  }
+
+  .input {
+    @apply w-full border border-slate-200 rounded-xl px-4 py-3 text-slate-800 placeholder-slate-400 bg-white focus:outline-none focus:ring-2 focus:ring-ink-400 focus:border-transparent transition-all;
+  }
+
+  .card {
+    @apply bg-white rounded-2xl shadow-sm border border-slate-100 p-5;
+  }
+
+  .badge-credit {
+    @apply bg-rose-50 text-rose-600 text-xs font-semibold px-2.5 py-1 rounded-full;
+  }
+
+  .badge-payment {
+    @apply bg-emerald-50 text-emerald-600 text-xs font-semibold px-2.5 py-1 rounded-full;
+  }
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+
+/* Page transition */
+.page-enter {
+  opacity: 0;
+  transform: translateY(8px);
+}
+.page-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 250ms, transform 250ms;
+}
