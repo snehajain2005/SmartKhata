@@ -50,10 +50,26 @@ export default function App() {
         <AppRoutes />
         <Toaster
           position="top-center"
+          gutter={8}
           toastOptions={{
-            style: { fontFamily: 'DM Sans, sans-serif', borderRadius: '12px', fontSize: '14px' },
-            success: { iconTheme: { primary: '#10b981', secondary: '#fff' } },
-            error: { iconTheme: { primary: '#f43f5e', secondary: '#fff' } },
+            duration: 3500,
+            style: {
+              fontFamily: 'Inter, sans-serif',
+              borderRadius: '12px',
+              fontSize: '14px',
+              fontWeight: '500',
+              boxShadow: '0 4px 16px rgba(0,0,0,0.12)',
+              border: '1px solid rgba(0,0,0,0.06)',
+              padding: '12px 16px',
+            },
+            success: {
+              iconTheme: { primary: '#10b981', secondary: '#fff' },
+              style: { background: '#fff', color: '#1e293b' },
+            },
+            error: {
+              iconTheme: { primary: '#f43f5e', secondary: '#fff' },
+              style: { background: '#fff', color: '#1e293b' },
+            },
           }}
         />
       </BrowserRouter>

@@ -27,6 +27,20 @@ const transactionSchema = new mongoose.Schema(
       trim: true,
       default: '',
     },
+    // Razorpay payment fields (optional — only set for online payments)
+    razorpayOrderId: {
+      type: String,
+      default: null,
+    },
+    razorpayPaymentId: {
+      type: String,
+      default: null,
+    },
+    paymentMethod: {
+      type: String,
+      enum: ['manual', 'razorpay'],
+      default: 'manual',
+    },
   },
   { timestamps: true }
 );
